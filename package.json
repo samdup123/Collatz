@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server ./index.js bundle.js"
+    "start": "webpack-dev-server ./index.js bundle.js",
+    "test": "mocha"
   },
   "author": "JamApps",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.12.3",
     "css-loader": "^0.26.1",
+    "mocha": "^3.2.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^1.16.3"
