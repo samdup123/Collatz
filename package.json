@@ -9,6 +9,7 @@
   "author": "JamApps",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.22.2",
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.12.3",
     "css-loader": "^0.26.1",
