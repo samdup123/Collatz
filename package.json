@@ -1,7 +1,7 @@
 {
   "name": "collatz_conjecture",
   "version": "1.0.0",
-  "description": "",
+  "description": "A website for visualizing Collatz Conjecture flows",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server ./index.js bundle.js",
