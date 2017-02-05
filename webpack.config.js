@@ -6,8 +6,11 @@ module.exports = {
   },
   module: {
     loaders: [
-        { test: /\.coffee$/, loader: "coffee-loader" },
-        { test: /\.(coffee\.md|litcoffee)$/, loader: "coffee-loader?literate" }
+      { test: /\.js$/,
+         exclude: /node_modules/,
+         loader: "babel-loader"
+      },
+      { test: /\.css$/, loader: "css!style" }
     ]
   }
 }
