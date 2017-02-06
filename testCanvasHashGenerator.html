@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script src="lib/canteen.min.js"></script>
+    <script >
+      let canvas = document.createElement('canvas')
+      canvas.width = 500
+      canvas.height = 500
+      ctx = canvas.getContext("2d");
+      ctx.beginPath()
+      ctx.moveTo(0,0)
+      ctx.lineTo(canvas.width, canvas.height)
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = 'blue';
+      ctx.stroke()
+      console.log(ctx.hash())
+    </script>
+
+  </body>
+</html>

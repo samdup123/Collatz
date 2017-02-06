@@ -4,7 +4,7 @@
   "description": "A website for visualizing Collatz Conjecture flows",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server ./index.js bundle.js --hot --inline",
+    "start": "./node_modules/.bin/webpack-dev-server ./index.js bundle.js",
     "test": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill ./test/*.js"
   },
   "author": "JamApps",
