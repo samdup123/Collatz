@@ -19,6 +19,7 @@ canvas.addEventListener('mousemove', (e)=> {
   let widthDivision = width/numPoints
 
   console.log(Math.ceil( (x+widthDivision/2)/widthDivision ))
+  canvas
 
 })
 

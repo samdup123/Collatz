@@ -58,7 +58,7 @@ export const draw = (numArray) =>
 {
   let max = findMax(numArray)
   let pointsArray = []
-  let widthDivision = canvas.width / numArray.length
+  let widthDivision = canvas.width / (numArray.length - 1)
   let heightDivision = canvas.height / max
   let ctx = canvas.getContext('2d')
   let firstNum = numArray[0]
