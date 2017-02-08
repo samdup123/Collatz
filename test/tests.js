@@ -58,6 +58,21 @@ describe('collatz_grapher', ()=> {
       assert.equal(100, collatz.findMax(testArray))
     })
   }) //end of #findMax()
+
+  // describe('#draw()', ()=> {
+  //   it('should return correct canvas for [2, 1] of size 500, 500', ()=> {
+  //     let canvas = new CanvasMock(500,500)
+  //     let ctx = canvas.getContext('2d')
+  //     ctx.beginPath()
+  //     ctx.moveTo(0,0)
+  //     ctx.lineTo(500,500)
+  //     ctx.stroke()
+  //     collatz.setCanvas(new CanvasMock(500,500))
+  //     let inputArray = [2,1]
+  //     assert.deepEqual(collatz.draw(inputArray).canvas.mock, canvas.mock)
+  //   })
+  // })
+
 }) //end collatz_grapher
 
 describe('CanvasMock and Contextmock', ()=> {
