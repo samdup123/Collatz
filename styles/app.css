@@ -1,4 +1,8 @@
-#myCanvas {
-  /*margin-top: 60px;*/
-
+#indicator {
+  position: absolute;
+  visibility: hidden;
+  background-color: white;
+  padding: 5px;
+  border-width: thin;
+  border-color: #e6e6e6
 }

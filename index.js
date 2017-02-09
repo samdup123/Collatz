@@ -1,10 +1,12 @@
 import * as collatz from './src/collatz_grapher.js'
+import * as _ from 'lodash.debounce'
 let canvas = document.getElementById('myCanvas')
+let indicator = document.getElementById('indicator')
 canvas.width = 900
 canvas.height = 500
 
 collatz.setCanvas(canvas)
-let arr = collatz.construct(8)
+let arr = collatz.construct(1231344)
 let drawData = collatz.draw(arr)
 
 
@@ -18,11 +20,24 @@ canvas.addEventListener('mousemove', (e)=> {
   let numPoints = drawData.pointsArray.length
   let width = canvas.width
   let widthDivision = width/(numPoints-1)
-
-
-  console.log(Math.ceil( (x + widthDivision/2)/widthDivision ), y)
-  canvas
-
+  let slice = Math.ceil( (x + widthDivision/2)/widthDivision )
+  //console.log(slice, drawData.pointsArray[slice - 1].y, y)
+  if ( Math.abs( y - drawData.pointsArray[slice - 1].y) < 10 )
+  {
+    indicator.style.visibility = 'visible'
+    indicator.innerHTML = arr[slice-1]
+    console.log('in the space')
+  }
+  else {
+    {
+      indicator.style.visibility = 'hidden'
+      console.log('out the space')
+    }
+  }
+  indicator.style.left = e.pageX + 20 + 'px'
+  indicator.style.top = e.pageY - 20 + 'px'
 })
 
-console.log(canvas.getBoundingClientRect())
+canvas.addEventListener('mouseleave', (e)=> {
+  indicator.style.visibility = 'hidden'
+})

@@ -64,7 +64,6 @@ export const draw = (numArray) =>
   let firstNum = numArray[0]
   ctx.beginPath();
   ctx.moveTo(0, canvas.height - firstNum*heightDivision)
-  console.log('numArray.length', numArray.length)
   for( let i = 0; i <= numArray.length - 1; i++ )
   {
     let x = i*widthDivision
@@ -79,12 +78,6 @@ export const draw = (numArray) =>
   ctx.lineWidth = 3
   ctx.strokeStyle = 'blue'
   ctx.stroke()
-  console.log('pts array length', pointsArray.length)
-  console.log('0',pointsArray[0])
-  console.log('1',pointsArray[1])
-  console.log('2',pointsArray[2])
-  console.log('3',pointsArray[3])
-  console.log('4',pointsArray[4])
 
 
   return {canvas: canvas, pointsArray: pointsArray}
