@@ -56,7 +56,6 @@ export const findMax = (array)=>
 
 export const draw = (numArray) =>
 {
-
   let max = findMax(numArray)
   let pointsArray = []
   let widthDivision = canvas.width / (numArray.length - 1)
@@ -77,7 +76,7 @@ export const draw = (numArray) =>
   }
 
   ctx.lineWidth = 3
-  ctx.strokeStyle = 'blue'
+  ctx.strokeStyle = '#f44336'
   ctx.stroke()
 
 

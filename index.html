@@ -2,16 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="stylesheet" href="./styles/app.css"/>
-    <title></title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300i" > -->
+    <title>Collatz Grapharts</title>
   </head>
-  <body>
-    <input type="text" id="numberInput" size="40" placeholder="input a number">
-    <button type="button" id="submitNumber">Submit</button>
-    <div id="canvasContainer">
-      <canvas id="canvas"></canvas>
+  <body class="white">
+    <div id="header" class="container light-blue lighten-2 z-depth-1">
+      <h1 class="center-align white-text">Collatz Grapher</h1>
+      <input type="text" id="numberInput" size="40" placeholder="input a number" class="container white z-depth-1">
     </div>
-    <span id="indicator">This is a fart</span>
+    <div id="canvasContainer" class="container z-depth-1" name="Click for random">
+      <canvas id="canvas" ></canvas>
+    </div>
+    <span id="indicator" class="conatainer z-depth-1"></span>
     <script src="bundle.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,17 +1,38 @@
-html, body {
-  height: 100%;
-}
-
 #indicator {
   position: absolute;
   visibility: hidden;
   background-color: white;
   padding: 5px;
   border: solid thin #e6e6e6;
-  border-radius: 5px
 }
 #canvasContainer {
-  width: 100%;
+  /*width: 100%;*/
   height: 90%;
-  outline: solid thin blue;
+  margin-top: 30px;
+  margin-bottom: 10%;
+  padding: 10px;
+}
+#canvasContainer:hover {
+  cursor: pointer;
+}
+#header {
+  padding: 10px;
+  margin-top: 30px;
+}
+#header h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-top: 0px;
+}
+#numberInput {
+  display: block;
+  margin: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+  border: none;
+}
+#numberInput:active {
+  border: none;
+}
+#numberInput:focus {
+  border: none;
 }

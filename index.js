@@ -5,16 +5,19 @@ let canvas = document.getElementById('canvas')
 let indicator = document.getElementById('indicator')
 let canvasContainer = document.getElementById('canvasContainer')
 let inputBox = document.getElementById('numberInput')
-let submitButton = document.getElementById('submitNumber')
 
 collatz.setCanvas(canvas)
 let arr
 let drawData
 let number
 
-const drawCanvas = ()=> {
-  canvas.width = canvasContainer.clientWidth
-  canvas.height = canvasContainer.clientHeight
+const drawCanvas = (number)=> {
+  console.log()
+  let canvasPadding = Number(window.getComputedStyle(canvasContainer, null).getPropertyValue('padding-left').slice(0, -2)) +
+                      Number(window.getComputedStyle(canvasContainer, null).getPropertyValue('padding-right').slice(0, -2))
+  console.log(canvasPadding)
+  canvas.width = canvasContainer.clientWidth - (canvasPadding)
+  canvas.height = window.innerHeight * .7
   arr = collatz.construct(number)
   drawData = collatz.draw(arr)
 }
@@ -48,14 +51,18 @@ canvas.addEventListener('mouseleave', (e)=> {
 })
 
 window.addEventListener('resize', (e)=> {
-  console.log(e)
   drawCanvas(number)
 })
 
+canvasContainer.addEventListener('click', (e)=> {
+  number = Math.floor(Math.random() * (100000 - 2)) + 2
+  numberInput.value = number
+  drawCanvas(number)
+})
 
-
-submitButton.addEventListener('click', (e)=> {
-  console.log(e)
-  number = Number(inputBox.value)
-  drawCanvas()
+inputBox.addEventListener('keyup', (e)=> {
+  if (e.keyCode == 13) {
+    number = Number(inputBox.value)
+    drawCanvas(number)
+  }
 })
