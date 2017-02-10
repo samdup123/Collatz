@@ -1,14 +1,23 @@
 import * as collatz from './src/collatz_grapher.js'
 import * as _ from 'lodash.debounce'
-let canvas = document.getElementById('myCanvas')
+
+let canvas = document.getElementById('canvas')
 let indicator = document.getElementById('indicator')
-canvas.width = 900
-canvas.height = 500
+let canvasContainer = document.getElementById('canvasContainer')
+let inputBox = document.getElementById('numberInput')
+let submitButton = document.getElementById('submitNumber')
 
 collatz.setCanvas(canvas)
-let arr = collatz.construct(1231344)
-let drawData = collatz.draw(arr)
+let arr
+let drawData
+let number
 
+const drawCanvas = ()=> {
+  canvas.width = canvasContainer.clientWidth
+  canvas.height = canvasContainer.clientHeight
+  arr = collatz.construct(number)
+  drawData = collatz.draw(arr)
+}
 
 canvas.addEventListener('mousemove', (e)=> {
 
@@ -26,13 +35,9 @@ canvas.addEventListener('mousemove', (e)=> {
   {
     indicator.style.visibility = 'visible'
     indicator.innerHTML = arr[slice-1]
-    console.log('in the space')
   }
   else {
-    {
-      indicator.style.visibility = 'hidden'
-      console.log('out the space')
-    }
+    indicator.style.visibility = 'hidden'
   }
   indicator.style.left = e.pageX + 20 + 'px'
   indicator.style.top = e.pageY - 20 + 'px'
@@ -40,4 +45,17 @@ canvas.addEventListener('mousemove', (e)=> {
 
 canvas.addEventListener('mouseleave', (e)=> {
   indicator.style.visibility = 'hidden'
+})
+
+window.addEventListener('resize', (e)=> {
+  console.log(e)
+  drawCanvas(number)
+})
+
+
+
+submitButton.addEventListener('click', (e)=> {
+  console.log(e)
+  number = Number(inputBox.value)
+  drawCanvas()
 })

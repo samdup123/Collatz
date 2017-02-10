@@ -56,11 +56,13 @@ export const findMax = (array)=>
 
 export const draw = (numArray) =>
 {
+
   let max = findMax(numArray)
   let pointsArray = []
   let widthDivision = canvas.width / (numArray.length - 1)
   let heightDivision = canvas.height / max
   let ctx = canvas.getContext('2d')
+  ctx.clearRect(0,0,canvas.width,canvas.height)
   let firstNum = numArray[0]
   ctx.beginPath();
   ctx.moveTo(0, canvas.height - firstNum*heightDivision)
@@ -71,7 +73,6 @@ export const draw = (numArray) =>
     let y = canvas.height - (numArray[i]-1)*canvas.height/(max-1)
 
     ctx.lineTo(x, y)
-    console.log(x,y)
     pointsArray.push( {x: x, y: y} )
   }
 
