@@ -3,6 +3,12 @@
   src: url(fonts/Vitreous-Light.ttf);
 }
 
+body, html {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  height: 100%;
+}
+
 #indicator {
   position: absolute;
   visibility: hidden;
@@ -46,22 +52,22 @@
 #numberInput:focus {
   border: none;
 }
-
 #numberInput::-webkit-input-placeholder {
     color: #000;
     opacity: .3 !important; /* for older chrome versions. may no longer apply. */
 }
-
 #numberInput:-moz-placeholder { /* Firefox 18- */
     color: #000;
     opacity: .3 !important;
 }
-
 #numberInput::-moz-placeholder {  /* Firefox 19+ */
     color: #000;
     opacity: .3 !important;
 }
-
 #numberInput:-ms-input-placeholder {
    color: #000;
+}
+footer a {
+  color: #e1f5fe;
+  font-weight: bold;
 }

@@ -25,13 +25,6 @@ const drawCanvas = (number)=> {
   }
 }
 
-clearCanvas()
-let ctx = canvas.getContext('2d')
-ctx.font= Math.min(parseInt(canvas.width/10),parseInt(canvas.height/3))  +"px Ariel, Sans-Serif"
-ctx.textAlign="center";
-ctx.fillStyle="#0277bd"
-ctx.fillText("Click Me!",canvas.width/2,  (1.1)*(canvas.height/2))
-
 canvas.addEventListener('mousemove', (e)=> {
 
   let xOffset = canvas.getBoundingClientRect().left

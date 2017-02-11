@@ -4,17 +4,46 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="stylesheet" href="./styles/app.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
     <title>Collatz Grapharts</title>
   </head>
   <body class="white">
-    <div id="header" class="container light-blue lighten-2 z-depth-1">
-      <h1 class="center-align white-text">Collatz Grapher</h1>
-      <input type="text" id="numberInput" placeholder="input a number" class="white z-depth-1">
-    </div>
-    <div id="canvasContainer" class="container z-depth-1 hoverable" title="Click for random">
-      <canvas id="canvas"></canvas>
-    </div>
+    <header>
+      <div id="header" class="container light-blue lighten-2 z-depth-1">
+        <h1 class="center-align white-text">Collatz Grapher</h1>
+        <input type="text" id="numberInput" placeholder="input a number" class="white z-depth-1">
+      </div>
+    </header>
+    <main>
+      <div id="canvasContainer" class="container z-depth-1 hoverable" title="Click for random">
+        <canvas id="canvas"></canvas>
+      </div>
+    </main>
+
+    <footer class="page-footer light-blue lighten-2">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">About Collatz Grapher</h5>
+            <p class="grey-text text-lighten-4">
+              The Collatz conjecture is simple: Take any number. If it's even devide it by two. If it's
+              odd multiply it by three and add one. Wash, rinse, repeat. The sequence always lands on
+              one and often forms stunning patterns.
+              <br>Get excited about Collatz <a href="https://www.youtube.com/watch?v=5mFpVDpKX70">here.</a>
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">More coming soon!</h5>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        Made with <a href="http://materializecss.com/">Materialize</a>
+        <a class="grey-text text-lighten-4 right" href="https://github.com/samdup123/Collatz-Conjecture-Grapher">Our GitHub</a>
+        </div>
+      </div>
+    </footer>
     <span id="indicator" class="conatainer z-depth-1"></span>
     <script src="bundle.js" charset="utf-8"></script>
   </body>

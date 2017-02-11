@@ -4,13 +4,15 @@ let canvas
 export const errorMessages = { BOUNDS:'Input must be above 1', NAN: 'Input must be a number'}
 const errors = { BOUNDS: new Error(errorMessages.BOUNDS), NAN: new Error(errorMessages.NAN)}
 
-export const setCanvas = (_canvas) =>
-{
+export const setCanvas = (_canvas) => {
   canvas = _canvas
 }
 
-export const construct = (number) =>
-{
+export const getCanvas = ()=> {
+  return canvas
+}
+
+export const construct = (number) => {
     if (number <= 1)
     {
       throw errors.BOUNDS
@@ -56,6 +58,7 @@ export const findMax = (array)=>
 
 export const draw = (numArray) =>
 {
+  let canvas = getCanvas()
   let max = findMax(numArray)
   let pointsArray = []
   let widthDivision = canvas.width / (numArray.length - 1)
@@ -79,6 +82,5 @@ export const draw = (numArray) =>
   ctx.strokeStyle = '#0277bd'
   ctx.stroke()
 
-
-  return {canvas: canvas, pointsArray: pointsArray}
+  return {pointsArray: pointsArray, numArray: numArray}
 }
