@@ -1,5 +1,4 @@
 import * as collatz from './src/collatz_grapher.js'
-import * as _ from 'lodash.debounce'
 
 let canvas = document.getElementById('canvas')
 let indicator = document.getElementById('indicator')
