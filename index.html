@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="stylesheet" href="./styles/app.css"/>
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300i" > -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">  
     <title>Collatz Grapharts</title>
   </head>
   <body class="white">
     <div id="header" class="container light-blue lighten-2 z-depth-1">
       <h1 class="center-align white-text">Collatz Grapher</h1>
-      <input type="text" id="numberInput" size="40" placeholder="input a number" class="container white z-depth-1">
+      <input type="text" id="numberInput" placeholder="input a number" class="white z-depth-1">
     </div>
-    <div id="canvasContainer" class="container z-depth-1" name="Click for random">
-      <canvas id="canvas" ></canvas>
+    <div id="canvasContainer" class="container z-depth-1 hoverable" title="Click for random">
+      <canvas id="canvas"></canvas>
     </div>
     <span id="indicator" class="conatainer z-depth-1"></span>
     <script src="bundle.js" charset="utf-8"></script>

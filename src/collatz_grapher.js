@@ -76,7 +76,7 @@ export const draw = (numArray) =>
   }
 
   ctx.lineWidth = 3
-  ctx.strokeStyle = '#f44336'
+  ctx.strokeStyle = '#0277bd'
   ctx.stroke()
 
 

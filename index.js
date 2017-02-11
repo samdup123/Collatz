@@ -11,16 +11,26 @@ let arr
 let drawData
 let number
 
+const clearCanvas = ()=> { drawCanvas()}
+
 const drawCanvas = (number)=> {
-  console.log()
   let canvasPadding = Number(window.getComputedStyle(canvasContainer, null).getPropertyValue('padding-left').slice(0, -2)) +
                       Number(window.getComputedStyle(canvasContainer, null).getPropertyValue('padding-right').slice(0, -2))
-  console.log(canvasPadding)
   canvas.width = canvasContainer.clientWidth - (canvasPadding)
   canvas.height = window.innerHeight * .7
-  arr = collatz.construct(number)
-  drawData = collatz.draw(arr)
+  if (number)
+  {
+    arr = collatz.construct(number)
+    drawData = collatz.draw(arr)
+  }
 }
+
+clearCanvas()
+let ctx = canvas.getContext('2d')
+ctx.font= Math.min(parseInt(canvas.width/10),parseInt(canvas.height/3))  +"px Ariel, Sans-Serif"
+ctx.textAlign="center";
+ctx.fillStyle="#0277bd"
+ctx.fillText("Click Me!",canvas.width/2,  (1.1)*(canvas.height/2))
 
 canvas.addEventListener('mousemove', (e)=> {
 
